@@ -11,9 +11,17 @@ class BinarySearchTest {
     void testSearch() {
         List<Integer> testList = createList();
         BinarySearch bs = new BinarySearch();
+
         assertTrue(bs.search(testList, 5));
     }
 
+    @Test
+    void testSearch_notFound() {
+        List<Integer> testList = createList();
+        BinarySearch bs = new BinarySearch();
+
+        assertFalse(bs.search(testList, 10));
+    }
 
     private List<Integer> createList() {
         List<Integer> sampleList = new ArrayList<Integer>();
