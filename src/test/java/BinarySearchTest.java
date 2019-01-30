@@ -7,6 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BinarySearchTest {
 
+    @Test
+    void testSearch() {
+        List<Integer> testList = createList();
+        BinarySearch bs = new BinarySearch();
+        assertTrue(bs.search(testList, 5));
+    }
+
+
     private List<Integer> createList() {
         List<Integer> sampleList = new ArrayList<Integer>();
         sampleList.add(1);
